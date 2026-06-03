@@ -13,64 +13,64 @@
 
 /* ── TOKENS ── */
 :root {
-  --pink:        #e91e8c;
-  --pink-mid:    #f06292;
-  --pink-light:  #f8bbd0;
-  --pink-pale:   #fce4ec;
-  --pink-bg:     #fff5f8;
-  --pink-border: #f48fb1;
-  --pink-hot:    #d81b60;
-  --text:        #222;
-  --muted:       #777;
-  --white:       #fff;
+ --pink: #e91e8c;
+ --pink-mid: #f06292;
+ --pink-light: #f8bbd0;
+ --pink-pale: #fce4ec;
+ --pink-bg: #fff5f8;
+ --pink-border: #f48fb1;
+ --pink-hot: #d81b60;
+ --text: #222;
+ --muted: #777;
+ --white: #fff;
 }
 
 /* ── BASE ── */
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Source Sans 3', sans-serif;
-  background: #fff;
-  color: var(--text);
-  line-height: 1.7;
-  font-size: 16px;
+ font-family: 'Source Sans 3', sans-serif;
+ background: #fff;
+ color: var(--text);
+ line-height: 1.7;
+ font-size: 16px;
 }
 
 /* ── TOPBAR ── */
 .topbar {
-  background: var(--pink);
-  text-align: center;
-  padding: 10px 20px;
-  font-family: 'Oswald', sans-serif;
-  font-size: clamp(14px, 3vw, 20px);
-  font-weight: 700;
-  letter-spacing: 3px;
-  color: #fff;
-  text-transform: uppercase;
+ background: var(--pink);
+ text-align: center;
+ padding: 10px 20px;
+ font-family: 'Oswald', sans-serif;
+ font-size: clamp(14px, 3vw, 20px);
+ font-weight: 700;
+ letter-spacing: 3px;
+ color: #fff;
+ text-transform: uppercase;
 }
 
 /* ── NAV ── */
 .nav {
-  background: #fff;
-  border-bottom: 2px solid var(--pink-light);
-  padding: 8px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  flex-wrap: wrap;
+ background: #fff;
+ border-bottom: 2px solid var(--pink-light);
+ padding: 8px 16px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 6px;
+ flex-wrap: wrap;
 }
 .nav-pill {
-  font-size: clamp(9px, 1.5vw, 11px);
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  border-radius: 20px;
-  color: var(--muted);
-  border: 1px solid #eee;
-  cursor: pointer;
-  transition: all .15s;
-  white-space: nowrap;
+ font-size: clamp(9px, 1.5vw, 11px);
+ font-weight: 700;
+ letter-spacing: 1px;
+ text-transform: uppercase;
+ padding: 4px 12px;
+ border-radius: 20px;
+ color: var(--muted);
+ border: 1px solid #eee;
+ cursor: pointer;
+ transition: all .15s;
+ white-space: nowrap;
 }
 .nav-pill:hover { border-color: var(--pink-mid); color: var(--pink); }
 .nav-pill.active { background: var(--pink); color: #fff; border-color: var(--pink); }
@@ -78,405 +78,405 @@ body {
 
 /* ── PAGE GRID ── */
 .page {
-  max-width: 980px;
-  margin: 28px auto 100px;
-  padding: 0 16px;
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 36px;
-  align-items: start;
+ max-width: 980px;
+ margin: 28px auto 100px;
+ padding: 0 16px;
+ display: grid;
+ grid-template-columns: 1fr 300px;
+ gap: 36px;
+ align-items: start;
 }
 
 /* tablet */
 @media (max-width: 800px) {
-  .page { grid-template-columns: 1fr; gap: 0; }
-  .sidebar { margin-top: 36px; }
+ .page { grid-template-columns: 1fr; gap: 0; }
+ .sidebar { margin-top: 36px; }
 }
 
 /* ── BYLINE ── */
 .byline {
-  font-size: 12px;
-  color: var(--muted);
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
+ font-size: 12px;
+ color: var(--muted);
+ margin-bottom: 10px;
+ display: flex;
+ align-items: center;
+ gap: 6px;
+ flex-wrap: wrap;
 }
 .byline .author { font-weight: 700; color: var(--pink-hot); }
 .byline .sep { color: #ccc; }
 
 /* ── HEADLINE ── */
 h1.headline {
-  font-family: 'Merriweather', serif;
-  font-size: clamp(17px, 5vw, 36px);
-  font-weight: 900;
-  line-height: 1.28;
-  color: #111;
-  margin-bottom: 12px;
-  word-break: break-word;
-  overflow-wrap: break-word;
+ font-family: 'Merriweather', serif;
+ font-size: clamp(17px, 5vw, 36px);
+ font-weight: 900;
+ line-height: 1.28;
+ color: #111;
+ margin-bottom: 12px;
+ word-break: break-word;
+ overflow-wrap: break-word;
 }
 h1.headline .kw {
-  color: var(--pink-hot);
-  background: var(--pink-pale);
-  padding: 2px 6px;
-  border-radius: 4px;
-  border-bottom: 3px solid var(--pink);
-  font-style: italic;
+ color: var(--pink-hot);
+ background: var(--pink-pale);
+ padding: 2px 6px;
+ border-radius: 4px;
+ border-bottom: 3px solid var(--pink);
+ font-style: italic;
 }
 
 /* ── DECK ── */
 .deck {
-  font-size: clamp(14px, 2vw, 16px);
-  color: #444;
-  border-left: 4px solid var(--pink);
-  padding-left: 14px;
-  margin-bottom: 20px;
-  font-style: italic;
-  line-height: 1.6;
+ font-size: clamp(14px, 2vw, 16px);
+ color: #444;
+ border-left: 4px solid var(--pink);
+ padding-left: 14px;
+ margin-bottom: 20px;
+ font-style: italic;
+ line-height: 1.6;
 }
 
  /* ── VIDEO ── */
-  .img-wrap {
-    border-radius: 6px;
-    overflow: hidden;
-    margin-bottom: 8px;
-    cursor: pointer;
-  }
+ .img-wrap {
+ border-radius: 6px;
+ overflow: hidden;
+ margin-bottom: 8px;
+ cursor: pointer;
+ }
  .img-wrap a {
-  display: block;
-  line-height: 0;
+ display: block;
+ line-height: 0;
 }
 
 .img-wrap img {
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  border-radius: 6px;
+ width: 100%;
+ max-width: 700px;
+ height: auto;
+ display: block;
+ margin: 0 auto;
+ border-radius: 6px;
 }
 
 /* ── CTA ── */
 .cta-wrap {
-  text-align: center;
-  margin: 28px 0;
+ text-align: center;
+ margin: 28px 0;
 }
 .cta-main {
-  display: inline-block;
-  background: linear-gradient(135deg, var(--pink) 0%, var(--pink-hot) 100%);
-  color: #fff;
-  font-family: 'Oswald', sans-serif;
-  font-size: clamp(15px, 2.5vw, 19px);
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 16px 36px;
-  border-radius: 6px;
-  text-decoration: none;
-  box-shadow: 0 6px 24px rgba(233,30,140,.4);
-  animation: ctapulse 2.5s ease-in-out infinite;
-  transition: opacity .15s;
-  width: auto;
-  max-width: 100%;
+ display: inline-block;
+ background: linear-gradient(135deg, var(--pink) 0%, var(--pink-hot) 100%);
+ color: #fff;
+ font-family: 'Oswald', sans-serif;
+ font-size: clamp(15px, 2.5vw, 19px);
+ font-weight: 700;
+ letter-spacing: 1px;
+ text-transform: uppercase;
+ padding: 16px 36px;
+ border-radius: 6px;
+ text-decoration: none;
+ box-shadow: 0 6px 24px rgba(233,30,140,.4);
+ animation: ctapulse 2.5s ease-in-out infinite;
+ transition: opacity .15s;
+ width: auto;
+ max-width: 100%;
 }
 .cta-main:hover { opacity: .9; }
 @keyframes ctapulse {
-  0%,100% { transform: translateY(0);   box-shadow: 0 6px 24px rgba(233,30,140,.4); }
-  50%      { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(233,30,140,.65); }
+ 0%,100% { transform: translateY(0); box-shadow: 0 6px 24px rgba(233,30,140,.4); }
+ 50% { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(233,30,140,.65); }
 }
 .cta-sub {
-  font-size: 12px;
-  color: var(--muted);
-  margin-top: 8px;
+ font-size: 12px;
+ color: var(--muted);
+ margin-top: 8px;
 }
 
 /* ── TABLET (≤ 800px) ── */
 @media (max-width: 800px) {
-  .page { grid-template-columns: 1fr; gap: 0; padding: 0 14px; }
-  .sidebar { margin-top: 32px; }
+ .page { grid-template-columns: 1fr; gap: 0; padding: 0 14px; }
+ .sidebar { margin-top: 32px; }
 }
 
 /* ── MOBILE (≤ 480px) ── */
 @media (max-width: 480px) {
-  body { font-size: 15px; }
-  .topbar { font-size: 13px; letter-spacing: 2px; padding: 8px 12px; }
-  .nav { gap: 4px; padding: 6px 10px; }
-  .nav-pill { font-size: 9px; padding: 3px 9px; }
-  .page { margin-top: 18px; padding: 0 12px; }
-  h1.headline { font-size: clamp(17px, 5.5vw, 24px); }
-  .deck { font-size: 14px; padding-left: 10px; }
-  .img-wrap img { max-width: 100%; border-radius: 4px; }
-  .cta-main { display: block; width: 100%; padding: 15px 16px; font-size: 15px; letter-spacing: 0.5px; }
-  .article p { font-size: 15px; line-height: 1.75; }
-  .hl { font-size: 14px; padding: 12px 14px; }
-  .science { padding: 14px; }
-  .science p { font-size: 13px !important; }
-  .testi { padding: 14px 14px 12px; }
-  .testi p { font-size: 14px !important; }
-  .testi::before { font-size: 44px; }
-  .sidebar-section-title { font-size: 13px; }
-  .si { padding: 10px 12px; gap: 8px; }
-  .si-thumb { width: 58px; height: 44px; }
-  .si-text { font-size: 12px; }
-  .sidebar-goal h3 { font-size: 14px; }
-  .sg-link { font-size: 13px; padding: 10px 12px; }
-  .sticky.visible { flex-wrap: wrap; gap: 6px; padding: 8px 12px; }
-  .sticky p { text-align: center; width: 100%; font-size: 12px; }
-  .sticky-cta { width: 100%; text-align: center; padding: 10px; font-size: 13px; }
-  .disclaimer { font-size: 10px; padding: 14px; }
+ body { font-size: 15px; }
+ .topbar { font-size: 13px; letter-spacing: 2px; padding: 8px 12px; }
+ .nav { gap: 4px; padding: 6px 10px; }
+ .nav-pill { font-size: 9px; padding: 3px 9px; }
+ .page { margin-top: 18px; padding: 0 12px; }
+ h1.headline { font-size: clamp(17px, 5.5vw, 24px); }
+ .deck { font-size: 14px; padding-left: 10px; }
+ .img-wrap img { max-width: 100%; border-radius: 4px; }
+ .cta-main { display: block; width: 100%; padding: 15px 16px; font-size: 15px; letter-spacing: 0.5px; }
+ .article p { font-size: 15px; line-height: 1.75; }
+ .hl { font-size: 14px; padding: 12px 14px; }
+ .science { padding: 14px; }
+ .science p { font-size: 13px !important; }
+ .testi { padding: 14px 14px 12px; }
+ .testi p { font-size: 14px !important; }
+ .testi::before { font-size: 44px; }
+ .sidebar-section-title { font-size: 13px; }
+ .si { padding: 10px 12px; gap: 8px; }
+ .si-thumb { width: 58px; height: 44px; }
+ .si-text { font-size: 12px; }
+ .sidebar-goal h3 { font-size: 14px; }
+ .sg-link { font-size: 13px; padding: 10px 12px; }
+ .sticky.visible { flex-wrap: wrap; gap: 6px; padding: 8px 12px; }
+ .sticky p { text-align: center; width: 100%; font-size: 12px; }
+ .sticky-cta { width: 100%; text-align: center; padding: 10px; font-size: 13px; }
+ .disclaimer { font-size: 10px; padding: 14px; }
 }
 
 /* ── ARTICLE BODY ── */
 .article p {
-  font-size: clamp(15px, 2vw, 16px);
-  color: #2d1020;
-  margin-bottom: 18px;
-  line-height: 1.8;
+ font-size: clamp(15px, 2vw, 16px);
+ color: #2d1020;
+ margin-bottom: 18px;
+ line-height: 1.8;
 }
 .article p strong { color: #111; }
 
 /* highlight box */
 .hl {
-  background: var(--pink-pale);
-  border-left: 4px solid var(--pink);
-  padding: 14px 18px;
-  margin: 22px 0;
-  border-radius: 0 6px 6px 0;
-  font-size: clamp(14px, 2vw, 16px);
-  font-weight: 700;
-  color: var(--pink-hot);
-  font-style: italic;
-  line-height: 1.6;
+ background: var(--pink-pale);
+ border-left: 4px solid var(--pink);
+ padding: 14px 18px;
+ margin: 22px 0;
+ border-radius: 0 6px 6px 0;
+ font-size: clamp(14px, 2vw, 16px);
+ font-weight: 700;
+ color: var(--pink-hot);
+ font-style: italic;
+ line-height: 1.6;
 }
 
 /* science box */
 .science {
-  background: var(--pink-pale);
-  border: 1px solid var(--pink-border);
-  border-radius: 8px;
-  padding: 18px 20px;
-  margin: 22px 0;
+ background: var(--pink-pale);
+ border: 1px solid var(--pink-border);
+ border-radius: 8px;
+ padding: 18px 20px;
+ margin: 22px 0;
 }
 .science h4 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: var(--pink-hot);
-  margin-bottom: 8px;
+ font-family: 'Oswald', sans-serif;
+ font-size: 12px;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ color: var(--pink-hot);
+ margin-bottom: 8px;
 }
 .science p { font-size: 14px !important; color: #5a1035 !important; margin-bottom: 0 !important; }
 
 /* celeb bar */
 .celeb-bar {
-  background: #fff;
-  border: 1px solid var(--pink-light);
-  border-radius: 8px;
-  padding: 14px 16px;
-  margin: 22px 0;
-  text-align: center;
+ background: #fff;
+ border: 1px solid var(--pink-light);
+ border-radius: 8px;
+ padding: 14px 16px;
+ margin: 22px 0;
+ text-align: center;
 }
 .celeb-label {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 10px;
+ font-size: 10px;
+ font-weight: 700;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ color: var(--muted);
+ margin-bottom: 10px;
 }
 .celeb-names {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  flex-wrap: wrap;
+ display: flex;
+ justify-content: center;
+ gap: 8px;
+ flex-wrap: wrap;
 }
 .celeb-names span {
-  background: var(--pink-pale);
-  color: var(--pink-hot);
-  font-size: 13px;
-  font-weight: 700;
-  padding: 5px 14px;
-  border-radius: 20px;
-  border: 1px solid var(--pink-border);
-  white-space: nowrap;
+ background: var(--pink-pale);
+ color: var(--pink-hot);
+ font-size: 13px;
+ font-weight: 700;
+ padding: 5px 14px;
+ border-radius: 20px;
+ border: 1px solid var(--pink-border);
+ white-space: nowrap;
 }
 
 /* testimonial */
 .testi {
-  background: #fff;
-  border: 1px solid var(--pink-light);
-  border-radius: 8px;
-  padding: 16px 18px 14px;
-  margin: 18px 0;
-  position: relative;
+ background: #fff;
+ border: 1px solid var(--pink-light);
+ border-radius: 8px;
+ padding: 16px 18px 14px;
+ margin: 18px 0;
+ position: relative;
 }
 .testi::before {
-  content: '"';
-  font-family: 'Merriweather', serif;
-  font-size: 56px;
-  color: var(--pink-light);
-  position: absolute;
-  top: -6px; left: 14px;
-  line-height: 1;
-  pointer-events: none;
+ content: '"';
+ font-family: 'Merriweather', serif;
+ font-size: 56px;
+ color: var(--pink-light);
+ position: absolute;
+ top: -6px; left: 14px;
+ line-height: 1;
+ pointer-events: none;
 }
 .testi .stars { color: var(--pink); font-size: 13px; margin-bottom: 6px; }
 .testi p {
-  font-size: 15px !important;
-  font-style: italic;
-  color: #444 !important;
-  margin-bottom: 8px !important;
-  padding-top: 10px;
+ font-size: 15px !important;
+ font-style: italic;
+ color: #444 !important;
+ margin-bottom: 8px !important;
+ padding-top: 10px;
 }
 .testi .tname { font-size: 12px; font-weight: 700; color: var(--pink); }
 
 /* divider */
 .divider {
-  border: none;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--pink-light), transparent);
-  margin: 32px 0;
+ border: none;
+ height: 1px;
+ background: linear-gradient(90deg, transparent, var(--pink-light), transparent);
+ margin: 32px 0;
 }
 
 /* ── SIDEBAR ── */
 .sidebar-section {
-  background: #fff;
-  border: 1px solid var(--pink-light);
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 22px;
+ background: #fff;
+ border: 1px solid var(--pink-light);
+ border-radius: 8px;
+ overflow: hidden;
+ margin-bottom: 22px;
 }
 .sidebar-section-title {
-  background: var(--pink-pale);
-  border-bottom: 2px solid var(--pink-light);
-  padding: 10px 16px;
-  font-family: 'Merriweather', serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--pink-hot);
-  text-align: center;
+ background: var(--pink-pale);
+ border-bottom: 2px solid var(--pink-light);
+ padding: 10px 16px;
+ font-family: 'Merriweather', serif;
+ font-size: 14px;
+ font-weight: 700;
+ color: var(--pink-hot);
+ text-align: center;
 }
 .si {
-  display: flex;
-  gap: 10px;
-  padding: 12px 14px;
-  border-bottom: 1px solid var(--pink-pale);
-  cursor: pointer;
-  transition: background .12s;
-  text-decoration: none;
+ display: flex;
+ gap: 10px;
+ padding: 12px 14px;
+ border-bottom: 1px solid var(--pink-pale);
+ cursor: pointer;
+ transition: background .12s;
+ text-decoration: none;
 }
 .si:last-child { border-bottom: none; }
 .si:hover { background: var(--pink-bg); }
 .si-thumb {
-  width: 68px; height: 52px;
-  border-radius: 5px;
-  flex-shrink: 0;
-  overflow: hidden;
-  background: var(--pink-pale);
+ width: 68px; height: 52px;
+ border-radius: 5px;
+ flex-shrink: 0;
+ overflow: hidden;
+ background: var(--pink-pale);
 }
 .si-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+ display: block;
 }
 .si-meta { font-size: 10px; color: var(--muted); margin-bottom: 3px; }
 .si-text { font-size: 13px; font-weight: 700; color: var(--pink); line-height: 1.4; }
 
 .sidebar-goal {
-  background: #fff;
-  border: 1px solid var(--pink-light);
-  border-radius: 8px;
-  padding: 18px 16px;
-  margin-bottom: 22px;
+ background: #fff;
+ border: 1px solid var(--pink-light);
+ border-radius: 8px;
+ padding: 18px 16px;
+ margin-bottom: 22px;
 }
 .sidebar-goal h3 {
-  font-family: 'Merriweather', serif;
-  font-size: 15px;
-  font-weight: 700;
-  color: #111;
-  text-align: center;
-  margin-bottom: 6px;
+ font-family: 'Merriweather', serif;
+ font-size: 15px;
+ font-weight: 700;
+ color: #111;
+ text-align: center;
+ margin-bottom: 6px;
 }
 .sidebar-goal .sub {
-  font-size: 12px;
-  color: var(--muted);
-  text-align: center;
-  margin-bottom: 14px;
-  line-height: 1.5;
+ font-size: 12px;
+ color: var(--muted);
+ text-align: center;
+ margin-bottom: 14px;
+ line-height: 1.5;
 }
 .sg-link {
-  display: block;
-  width: 100%;
-  background: var(--pink);
-  color: #fff;
-  font-family: 'Oswald', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 11px 14px;
-  border-radius: 4px;
-  margin-bottom: 8px;
-  text-align: center;
-  text-decoration: none;
-  transition: background .15s;
+ display: block;
+ width: 100%;
+ background: var(--pink);
+ color: #fff;
+ font-family: 'Oswald', sans-serif;
+ font-size: 14px;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ padding: 11px 14px;
+ border-radius: 4px;
+ margin-bottom: 8px;
+ text-align: center;
+ text-decoration: none;
+ transition: background .15s;
 }
 .sg-link:hover { background: var(--pink-hot); }
 .sg-link:last-child { margin-bottom: 0; }
 
 /* ── STICKY FOOTER ── */
 .sticky {
-  position: fixed;
-  bottom: 0; left: 0; right: 0;
-  transform: translateY(100%);
-  transition: transform 0.4s ease;
+ position: fixed;
+ bottom: 0; left: 0; right: 0;
+ transform: translateY(100%);
+ transition: transform 0.4s ease;
 }
 .sticky.visible {
-  transform: translateY(0);
-  background: var(--pink);
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  z-index: 200;
-  box-shadow: 0 -3px 20px rgba(233,30,140,.3);
+ transform: translateY(0);
+ background: var(--pink);
+ padding: 10px 20px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 16px;
+ z-index: 200;
+ box-shadow: 0 -3px 20px rgba(233,30,140,.3);
 }
 .sticky p {
-  color: #fff;
-  font-size: clamp(11px, 2vw, 13px);
-  font-weight: 700;
+ color: #fff;
+ font-size: clamp(11px, 2vw, 13px);
+ font-weight: 700;
 }
 .sticky-cta {
-  background: #fff;
-  color: var(--pink);
-  font-family: 'Oswald', sans-serif;
-  font-size: clamp(12px, 2vw, 14px);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 9px 22px;
-  border-radius: 4px;
-  text-decoration: none;
-  white-space: nowrap;
-  flex-shrink: 0;
-  box-shadow: 0 2px 12px rgba(0,0,0,.15);
-  transition: opacity .15s;
+ background: #fff;
+ color: var(--pink);
+ font-family: 'Oswald', sans-serif;
+ font-size: clamp(12px, 2vw, 14px);
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ padding: 9px 22px;
+ border-radius: 4px;
+ text-decoration: none;
+ white-space: nowrap;
+ flex-shrink: 0;
+ box-shadow: 0 2px 12px rgba(0,0,0,.15);
+ transition: opacity .15s;
 }
 .sticky-cta:hover { opacity: .9; }
 
 /* ── DISCLAIMER ── */
 .disclaimer {
-  background: var(--pink-pale);
-  border-top: 1px solid var(--pink-light);
-  padding: 18px 20px;
-  text-align: center;
-  font-size: 11px;
-  color: var(--muted);
-  line-height: 1.6;
+ background: var(--pink-pale);
+ border-top: 1px solid var(--pink-light);
+ padding: 18px 20px;
+ text-align: center;
+ font-size: 11px;
+ color: var(--muted);
+ line-height: 1.6;
 }
 .disclaimer a { color: var(--pink); text-decoration: none; }
 
@@ -485,216 +485,216 @@ h1.headline .kw {
 <body>
 
 <!-- TOPBAR -->
-<div class="topbar" _element_id="NOME_SITE">Wellness Authority</div>
+<div class="topbar">Wellness Authority</div>
 
 <!-- NAV -->
-<div class="nav" _element_id="TAGS_CATEGORIA">
-  <span class="nav-pill ad-tag">Advertisement</span>
-  <span class="nav-pill">Health</span>
-  <span class="nav-pill">Nutrition</span>
-  <span class="nav-pill active">Healthy Living</span>
-  <span class="nav-pill">Women</span>
-  <span class="nav-pill">Wellness</span>
+<div class="nav">
+ <span class="nav-pill ad-tag">Advertisement</span>
+ <span class="nav-pill">Health</span>
+ <span class="nav-pill">Nutrition</span>
+ <span class="nav-pill active">Healthy Living</span>
+ <span class="nav-pill">Women</span>
+ <span class="nav-pill">Wellness</span>
 </div>
 
 <!-- PAGE GRID -->
 <div class="page">
 
-  <!-- ═══ MAIN ═══ -->
-  <main>
+ <!-- ═══ MAIN ═══ -->
+ <main>
 
-    <div class="byline" _element_id="BYLINE_AUTOR_DATA">
-      <span class="author">By Dr. Sanjay Gupta</span>
-      <span class="sep">·</span>
-      <span>Board-Certified Neurosurgeon · CNN Chief Medical Correspondent</span>
-      <span class="sep">·</span>
-      <span>April 20, 2026</span>
-    </div>
+ <div class="byline">
+ <span class="author">By Dr. Sanjay Gupta</span>
+ <span class="sep">·</span>
+ <span>Board-Certified Neurosurgeon · CNN Chief Medical Correspondent</span>
+ <span class="sep">·</span>
+ <span>April 20, 2026</span>
+ </div>
 
-    <h1 class="headline" _element_id="HEADLINE">
-      Dr. Sanjay Gupta Reveals <span style="color:#d60505;">The $4 Bariatric Gelatin Trick</span> — That Actually Melts Fat 24 Hours A Day, 7 Days A Week.
-    </h1>
+ <h1 class="headline">
+ Dr. Sanjay Gupta Reveals <span style="color:#d60505;">The $4 Bariatric Gelatin Trick</span> — That Actually Melts Fat 24 Hours A Day, 7 Days A Week.
+ </h1>
 
-    <p class="deck" _element_id="SUBHEADLINE">The real method isn’t Jello — it’s a refined version called bariatric gelatin, built around a simple daily routine.</p>
+ <p class="deck">The real method isn’t Jello — it’s a refined version called bariatric gelatin, built around a simple daily routine.</p>
 
-    <!-- IMAGE -->
-    <div class="img-wrap">
-      <a href="video.php">
-        <img src="./assets/Sem-nome-Post-para-Instagram-45-2.gif" alt="gelatin">
-      </a>
-    </div>
+ <!-- IMAGE -->
+ <div class="img-wrap">
+ <a href="video.php">
+ <img src="./assets/Sem-nome-Post-para-Instagram-45-2.gif" alt="gelatin">
+ </a>
+ </div>
 
-    <!-- CTA #1 — logo após a imagem -->
-    <div class="cta-wrap" _element_id="CTA_TEXTO_HERO">
-      <a href="video.php" class="cta-main">▶ Watch the Free Presentation Now</a>
-     </div>
+ <!-- CTA #1 — logo após a imagem -->
+ <div class="cta-wrap">
+ <a href="video.php" class="cta-main">▶ Watch the Free Presentation Now</a>
+ </div>
 
-    <!-- ARTICLE -->
-    <div class="article">
+ <!-- ARTICLE -->
+ <div class="article">
 
-      <p _element_id="INTRODUCAO_ALERTA">If you've seen Dr. Oz or Dr. Jen talking about the gelatin recipe on social media, I need you to stop everything and listen carefully — because what they're teaching is wrong. And I'm going to prove it to you right now.</p>
+ <p>If you've seen Dr. Oz or Dr. Jen talking about the gelatin recipe on social media, I need you to stop everything and listen carefully — because what they're teaching is wrong. And I'm going to prove it to you right now.</p>
 
-      <p _element_id="PROBLEMA_MITO_COMUM">The gelatin they're telling you to use is Jello. That little box you find at the grocery store. What they're not telling you is that <strong>a single serving of Jello has more sugar than a can of Coca-Cola.</strong> So every time you make their weight loss recipe, you're flooding your body with sugar, artificial dyes, and empty calories. You think you're losing weight — but you're actually making it worse.</p>
+ <p>The gelatin they're telling you to use is Jello. That little box you find at the grocery store. What they're not telling you is that <strong>a single serving of Jello has more sugar than a can of Coca-Cola.</strong> So every time you make their weight loss recipe, you're flooding your body with sugar, artificial dyes, and empty calories. You think you're losing weight — but you're actually making it worse.</p>
 
-      <p _element_id="VALIDACAO_SENTIMENTO">That's why so many women tried the gelatin recipe and saw zero results. It's not their fault. <strong>They were given the wrong recipe.</strong> The real gelatin recipe doesn't use Jello. It uses unflavored gelatin — pure collagen protein with zero sugar. And when you combine it the right way with three other ingredients that cost less than $2, you trigger a fat-burning process that melts up to 3 pounds per day.</p>
+ <p>That's why so many women tried the gelatin recipe and saw zero results. It's not their fault. <strong>They were given the wrong recipe.</strong> The real gelatin recipe doesn't use Jello. It uses unflavored gelatin — pure collagen protein with zero sugar. And when you combine it the right way with three other ingredients that cost less than $2, you trigger a fat-burning process that melts up to 3 pounds per day.</p>
 
-      <div class="hl" _element_id="CONFISSAO_ESPECIALISTA">
-        ⚠️ I'll admit it — I was teaching the wrong version too. When I saw the research showing the difference between Jello and unflavored gelatin, I realized we were setting people up to fail. The real recipe changes everything.
-      </div>
+ <div class="hl">
+ ⚠️ I'll admit it — I was teaching the wrong version too. When I saw the research showing the difference between Jello and unflavored gelatin, I realized we were setting people up to fail. The real recipe changes everything.
+ </div>
 
-      <p _element_id="AUTORIDADE_DETALHADA">My name is <strong>Dr. Sanjay Gupta</strong>. I'm a board-certified neurosurgeon, a University of Michigan Medical School graduate, and CNN's chief medical correspondent. I've spent over 20 years helping thousands of patients achieve optimal metabolic health. And what I'm about to share is the discovery that allows you to lose <strong>23 pounds in 10 days and 71 pounds in three months</strong> — naturally, with no extreme diets or magic pills.</p>
+ <p>My name is <strong>Dr. Sanjay Gupta</strong>. I'm a board-certified neurosurgeon, a University of Michigan Medical School graduate, and CNN's chief medical correspondent. I've spent over 20 years helping thousands of patients achieve optimal metabolic health. And what I'm about to share is the discovery that allows you to lose <strong>23 pounds in 10 days and 71 pounds in three months</strong> — naturally, with no extreme diets or magic pills.</p>
 
-      <p _element_id="PROVA_SOCIAL_VIRAL">This exact gelatin recipe has already gone viral with over <strong>21 million views.</strong> But most people are still making it wrong because of what they saw on social media. So I decided to share the real version one more time — because when you do it right, you'll trigger a fat-burn process that sheds all your unwanted body fat without weekly Mounjaro injections, hit classes, or starving yourself on keto.</p>
+ <p>This exact gelatin recipe has already gone viral with over <strong>21 million views.</strong> But most people are still making it wrong because of what they saw on social media. So I decided to share the real version one more time — because when you do it right, you'll trigger a fat-burn process that sheds all your unwanted body fat without weekly Mounjaro injections, hit classes, or starving yourself on keto.</p>
 
-      <div class="science">
-        <h4 _element_id="TITULO_CIENCIA">🔬 Why Diets Stop Working — and What the Science Really Shows</h4>
-        <p _element_id="CAUSA_RAIZ_BIOLOGICA">The problem was never what you ate or how much you exercised. The real issue is what your body stopped producing. When you're overweight, your body stops producing <strong>GLP-1 and GIP</strong> — the two hormones that control hunger and trigger fat burning. Without them, your body enters panic mode: it thinks food is scarce, stores everything as fat, and leaves you hungry and exhausted no matter what you do.</p>
-        <p _element_id="PROVA_CIENTIFICA_FONTE">A study published in <em>JAMA</em> — one of the most respected medical journals in the world — proved that people who activate GLP-1 and GIP <strong>lose up to 39 times more weight</strong> than those who just diet and exercise. That's the difference between people who struggle their whole lives and people who lose weight effortlessly.</p>
-        <p _element_id="CRITICA_SOLUCAO_SINTETICA">Mounjaro works — but only for a while. When you inject synthetic versions of these hormones, your body shuts down its own natural production. You get trapped in a cycle of chemical dependency, and the moment you stop, the weight comes back faster and heavier than before. That's the infamous rebound. Not to mention chronic nausea, constipation, hair loss, and a black box warning for <strong>thyroid tumors</strong> — all at up to $2,000 a month.</p>
-        <p _element_id="MECANISMO_UNICO_ANALOGIA">Bariatric gelatin does the opposite: it <em>reactivates</em> your body's own production of GLP-1 and GIP. It's the difference between giving someone a fish and teaching them how to fish. That's why the results last.</p>
-      </div>
+ <div class="science">
+ <h4>🔬 Why Diets Stop Working — and What the Science Really Shows</h4>
+ <p>The problem was never what you ate or how much you exercised. The real issue is what your body stopped producing. When you're overweight, your body stops producing <strong>GLP-1 and GIP</strong> — the two hormones that control hunger and trigger fat burning. Without them, your body enters panic mode: it thinks food is scarce, stores everything as fat, and leaves you hungry and exhausted no matter what you do.</p>
+ <p>A study published in <em>JAMA</em> — one of the most respected medical journals in the world — proved that people who activate GLP-1 and GIP <strong>lose up to 39 times more weight</strong> than those who just diet and exercise. That's the difference between people who struggle their whole lives and people who lose weight effortlessly.</p>
+ <p>Mounjaro works — but only for a while. When you inject synthetic versions of these hormones, your body shuts down its own natural production. You get trapped in a cycle of chemical dependency, and the moment you stop, the weight comes back faster and heavier than before. That's the infamous rebound. Not to mention chronic nausea, constipation, hair loss, and a black box warning for <strong>thyroid tumors</strong> — all at up to $2,000 a month.</p>
+ <p>Bariatric gelatin does the opposite: it <em>reactivates</em> your body's own production of GLP-1 and GIP. It's the difference between giving someone a fish and teaching them how to fish. That's why the results last.</p>
+ </div>
 
-      <p _element_id="CIENCIA_DOS_INGREDIENTES">Gelatin contains two specific amino acids — <strong>glycine and alanine</strong> — that stimulate your intestinal receptors to produce GLP-1 and GIP naturally. But they only work when combined with three precise bioactive compounds. A 2025 study by the European Chemical Society found that glycine can increase GLP-1 by up to <strong>182%</strong>, and alanine raises GIP by <strong>144%</strong>. The researchers called it the <em>"cascading metabolic effect"</em> — once activated, the fat-burning multiplies hour after hour, even while you sleep.</p>
+ <p>Gelatin contains two specific amino acids — <strong>glycine and alanine</strong> — that stimulate your intestinal receptors to produce GLP-1 and GIP naturally. But they only work when combined with three precise bioactive compounds. A 2025 study by the European Chemical Society found that glycine can increase GLP-1 by up to <strong>182%</strong>, and alanine raises GIP by <strong>144%</strong>. The researchers called it the <em>"cascading metabolic effect"</em> — once activated, the fat-burning multiplies hour after hour, even while you sleep.</p>
 
-      <p _element_id="CATALISADORES_EXTRAS">The three additional ingredients are: <strong>green tea extract</strong> (the silent accelerator — doubles belly fat loss according to the American Journal of Clinical Nutrition), <strong>concentrated gingerol</strong> (activates both GLP-1 and GIP simultaneously, raises body temperature to burn calories 24/7), and <strong>turmeric with piperine</strong> — which clears the gut inflammation that blocks your hormone receptors after age 35, and prevents the yo-yo effect by creating what I call <em>metabolic memory.</em></p>
+ <p>The three additional ingredients are: <strong>green tea extract</strong> (the silent accelerator — doubles belly fat loss according to the American Journal of Clinical Nutrition), <strong>concentrated gingerol</strong> (activates both GLP-1 and GIP simultaneously, raises body temperature to burn calories 24/7), and <strong>turmeric with piperine</strong> — which clears the gut inflammation that blocks your hormone receptors after age 35, and prevents the yo-yo effect by creating what I call <em>metabolic memory.</em></p>
 
-      <!-- CTA #2 -->
-      <div class="cta-wrap">
-        <a href="video.php" class="cta-main" _element_id="CTA_LINK_PROCESSO">▶ See the Full Step-by-Step Recipe</a>
-        <p class="cta-sub" _element_id="GATILHOS_URGENCIA">Free presentation · 21 million views · May be taken down soon</p>
-      </div>
+ <!-- CTA #2 -->
+ <div class="cta-wrap">
+ <a href="video.php" class="cta-main">▶ See the Full Step-by-Step Recipe</a>
+ <p class="cta-sub">Free presentation · 21 million views · May be taken down soon</p>
+ </div>
 
-      <!-- TESTI 1 -->
-      <div class="testi">
-        <div class="stars" _element_id="ESTRELAS_1">★★★★★</div>
-        <p _element_id="DEPOIMENTO_TEXTO_1">I thought it was just another empty promise. But on day 10, my costume started falling off. I stepped on the scale and nearly fell backward — 23 pounds in 10 days. In three months I lost 100 pounds. No diet, no gym, no hunger. I pulled out the dress from my Misery premiere and two of me could fit inside. For the first time in decades, I felt like myself again.</p>
-        <div class="tname" _element_id="DEPOIMENTO_AUTOR_1">— Kathy B., Actress — Los Angeles</div>
-      </div>
+ <!-- TESTI 1 -->
+ <div class="testi">
+ <div class="stars">★★★★★</div>
+ <p>I thought it was just another empty promise. But on day 10, my costume started falling off. I stepped on the scale and nearly fell backward — 23 pounds in 10 days. In three months I lost 100 pounds. No diet, no gym, no hunger. I pulled out the dress from my Misery premiere and two of me could fit inside. For the first time in decades, I felt like myself again.</p>
+ <div class="tname">— Kathy B., Actress — Los Angeles</div>
+ </div>
 
-      <p _element_id="DEPOIMENTO_CELEBRIDADE_AUTORIDADE">After actress <strong>Kathy Bates</strong> lost over 100 pounds, she sent me a message: <em>"That recipe was the only one that actually worked out of everything I tried — and believe me, I tried everything for 7 years."</em> She had spent $15,000 on intermittent fasting, $12,000 on keto, and $23,000 on Mounjaro. Every single time, the weight came back. With bariatric gelatin, it didn't.</p>
+ <p>After actress <strong>Kathy Bates</strong> lost over 100 pounds, she sent me a message: <em>"That recipe was the only one that actually worked out of everything I tried — and believe me, I tried everything for 7 years."</em> She had spent $15,000 on intermittent fasting, $12,000 on keto, and $23,000 on Mounjaro. Every single time, the weight came back. With bariatric gelatin, it didn't.</p>
 
-      <p _element_id="HISTORIA_TERCEIROS">Her friend — a fellow actress who appears decades younger than her age — called her after noticing the transformation: <em>"I tried all that stuff you mentioned too and nothing worked long term. Then I met Dr. Gupta and lost 27 pounds with a gelatin recipe. Yeah, you heard me right — gelatin."</em></p>
+ <p>Her friend — a fellow actress who appears decades younger than her age — called her after noticing the transformation: <em>"I tried all that stuff you mentioned too and nothing worked long term. Then I met Dr. Gupta and lost 27 pounds with a gelatin recipe. Yeah, you heard me right — gelatin."</em></p>
 
-      <!-- TESTI 2 -->
-      <div class="testi">
-        <div class="stars" _element_id="ESTRELAS_2">★★★★★</div>
-        <p _element_id="DEPOIMENTO_TEXTO_2">21 days ago I felt bloated, tired, and stuck. I had tried everything — Ozempic made me nauseous, keto made me miserable. But this gelatin recipe? I'm already down 31 pounds and I haven't changed anything else. Not one thing.</p>
-        <div class="tname" _element_id="DEPOIMENTO_AUTOR_2">— Sandra M., 47 — Ohio</div>
-      </div>
+ <!-- TESTI 2 -->
+ <div class="testi">
+ <div class="stars">★★★★★</div>
+ <p>21 days ago I felt bloated, tired, and stuck. I had tried everything — Ozempic made me nauseous, keto made me miserable. But this gelatin recipe? I'm already down 31 pounds and I haven't changed anything else. Not one thing.</p>
+ <div class="tname">— Sandra M., 47 — Ohio</div>
+ </div>
 
-      <!-- TESTI 3 -->
-      <div class="testi">
-        <div class="stars" _element_id="ESTRELAS_3">★★★★★</div>
-        <p _element_id="DEPOIMENTO_TEXTO_3">In just two weeks of taking the bariatric gelatin before bed, I felt an incredible transformation. My energy is back, my patience improved, and I've lost 14 pounds without even trying. The most unbelievable part — I kept eating normally. Every morning the mirror surprised me.</p>
-        <div class="tname" _element_id="DEPOIMENTO_AUTOR_3">— Rebecca T., 52 — Texas</div>
-      </div>
+ <!-- TESTI 3 -->
+ <div class="testi">
+ <div class="stars">★★★★★</div>
+ <p>In just two weeks of taking the bariatric gelatin before bed, I felt an incredible transformation. My energy is back, my patience improved, and I've lost 14 pounds without even trying. The most unbelievable part — I kept eating normally. Every morning the mirror surprised me.</p>
+ <div class="tname">— Rebecca T., 52 — Texas</div>
+ </div>
 
-      <p _element_id="AVISO_RESULTADO_EXTREMO">Seriously — you'll probably need to stop using it when you notice that none of your clothes fit anymore. One woman in Canada lost so much weight so quickly she had to slow down. She was still eating pizza and drinking hot chocolate every day. <strong>None of these people went to the gym or followed a strict diet.</strong></p>
+ <p>Seriously — you'll probably need to stop using it when you notice that none of your clothes fit anymore. One woman in Canada lost so much weight so quickly she had to slow down. She was still eating pizza and drinking hot chocolate every day. <strong>None of these people went to the gym or followed a strict diet.</strong></p>
 
-      <p _element_id="PROMETE_CONTEUDO_VIDEO">The video covers the full step-by-step — unflavored gelatin, the three bioactive compounds, the exact preparation — and it's 100% free. It's already been seen over <strong>21 million times</strong>, and it keeps getting taken down. If it loads for you right now, don't miss your chance.</p>
+ <p>The video covers the full step-by-step — unflavored gelatin, the three bioactive compounds, the exact preparation — and it's 100% free. It's already been seen over <strong>21 million times</strong>, and it keeps getting taken down. If it loads for you right now, don't miss your chance.</p>
 
-      <hr class="divider">
+ <hr class="divider">
 
-      <p _element_id="IDENTIFICACAO_PUBLICO_ALVO">Especially if you're sick of stubborn fat on your belly, thighs, and arms — and nothing has worked despite doing everything right. <strong>One preparation per day. Under 3 minutes. And your body enters automatic fat-burning mode 24 hours a day.</strong></p>
+ <p>Especially if you're sick of stubborn fat on your belly, thighs, and arms — and nothing has worked despite doing everything right. <strong>One preparation per day. Under 3 minutes. And your body enters automatic fat-burning mode 24 hours a day.</strong></p>
 
-      <!-- CTA #3 -->
-      <div class="cta-wrap" _element_id="CTA_TEXTO_FINAL_CORPO">
-        <a href="video.php" class="cta-main">▶ Watch the Free Presentation Now</a>
-      </div>
+ <!-- CTA #3 -->
+ <div class="cta-wrap">
+ <a href="video.php" class="cta-main">▶ Watch the Free Presentation Now</a>
+ </div>
 
-    </div><!-- /article -->
-  </main>
+ </div><!-- /article -->
+ </main>
 
-  <!-- ═══ SIDEBAR ═══ -->
-  <aside class="sidebar">
+ <!-- ═══ SIDEBAR ═══ -->
+ <aside class="sidebar">
 
-    <div class="sidebar-section">
-      <div class="sidebar-section-title" _element_id="TITULO_BARRA_LATERAL">A Healthier Life</div>
+ <div class="sidebar-section">
+ <div class="sidebar-section-title">A Healthier Life</div>
 
-      <a href="video.php" class="si">
-        <div class="si-thumb">
-          <img src="./assets/img-a5ca594bef.webp" alt="gelatin metabolism">
-        </div>
-        <div class="si-body">
-          <div class="si-meta" _element_id="TIMESTAMP_NEWS_1">1 hour ago</div>
-          <div class="si-text" _element_id="SNIPPET_INFO_1">Reports suggest the nutrients in unflavored gelatin — not Jello — are what actually trigger GLP-1 production during sleep.</div>
-        </div>
-      </a>
+ <a href="video.php" class="si">
+ <div class="si-thumb">
+ <img src="./assets/img-a5ca594bef.webp" alt="gelatin metabolism">
+ </div>
+ <div class="si-body">
+ <div class="si-meta">1 hour ago</div>
+ <div class="si-text">Reports suggest the nutrients in unflavored gelatin — not Jello — are what actually trigger GLP-1 production during sleep.</div>
+ </div>
+ </a>
 
-      <a href="video.php" class="si">
-        <div class="si-thumb">
-          <img src="./assets/img-80857cd875.webp" alt="results">
-        </div>
-        <div class="si-body">
-          <div class="si-meta" _element_id="TIMESTAMP_NEWS_2">2 hours ago</div>
-          <div class="si-text" _element_id="SNIPPET_INFO_2">Women report losing 23 lbs in 10 days using the bariatric gelatin formula Dr. Gupta shared — without diet or gym.</div>
-        </div>
-      </a>
+ <a href="video.php" class="si">
+ <div class="si-thumb">
+ <img src="./assets/img-80857cd875.webp" alt="results">
+ </div>
+ <div class="si-body">
+ <div class="si-meta">2 hours ago</div>
+ <div class="si-text">Women report losing 23 lbs in 10 days using the bariatric gelatin formula Dr. Gupta shared — without diet or gym.</div>
+ </div>
+ </a>
 
-      <a href="video.php" class="si">
-        <div class="si-thumb">
-          <img src="./assets/img-afa6536bb6.webp" alt="at-home method">
-        </div>
-        <div class="si-body">
-          <div class="si-meta" _element_id="TIMESTAMP_NEWS_3">3 hours ago</div>
-          <div class="si-text" _element_id="SNIPPET_INFO_3">The 4-ingredient gelatin recipe going viral — and why the versions on social media are being taught the wrong way on purpose.</div>
-        </div>
-      </a>
-    </div>
+ <a href="video.php" class="si">
+ <div class="si-thumb">
+ <img src="./assets/img-afa6536bb6.webp" alt="at-home method">
+ </div>
+ <div class="si-body">
+ <div class="si-meta">3 hours ago</div>
+ <div class="si-text">The 4-ingredient gelatin recipe going viral — and why the versions on social media are being taught the wrong way on purpose.</div>
+ </div>
+ </a>
+ </div>
 
-    <!-- GOAL SELECTOR -->
-    <div class="sidebar-goal">
-      <h3 _element_id="TITULO_QUIZ_METAS">What Is Your Target Weight Loss Goal?</h3>
-      <p class="sub" _element_id="TEXTO_APOIO_QUIZ">Choose your goal below to discover how the gelatin trick can fit into your routine.</p>
-      <a href="video.php" class="sg-link" _element_id="QUIZ_OPCAO_1">10–15 pounds</a>
-      <a href="video.php" class="sg-link" _element_id="QUIZ_OPCAO_2">15–25 pounds</a>
-      <a href="video.php" class="sg-link" _element_id="QUIZ_OPCAO_3">25–35 pounds</a>
-      <a href="video.php" class="sg-link" _element_id="QUIZ_OPCAO_4">35+ pounds</a>
-    </div>
+ <!-- GOAL SELECTOR -->
+ <div class="sidebar-goal">
+ <h3>What Is Your Target Weight Loss Goal?</h3>
+ <p class="sub">Choose your goal below to discover how the gelatin trick can fit into your routine.</p>
+ <a href="video.php" class="sg-link">10–15 pounds</a>
+ <a href="video.php" class="sg-link">15–25 pounds</a>
+ <a href="video.php" class="sg-link">25–35 pounds</a>
+ <a href="video.php" class="sg-link">35+ pounds</a>
+ </div>
 
-    <!-- SIDEBAR CTA -->
-    <div class="cta-wrap" style="margin-top:0;" _element_id="CTA_TEXTO_QUIZ">
-      <a href="video.php" class="cta-main" style="font-size:14px; padding:13px 20px; display:block;">
-        ▶ Watch Free Presentation
-      </a>
-    </div>
+ <!-- SIDEBAR CTA -->
+ <div class="cta-wrap" style="margin-top:0;">
+ <a href="video.php" class="cta-main" style="font-size:14px; padding:13px 20px; display:block;">
+ ▶ Watch Free Presentation
+ </a>
+ </div>
 
-  </aside>
+ </aside>
 
 </div><!-- /page -->
 
 <!-- DISCLAIMER -->
 <div class="disclaimer">
-	<p _element_id="DIREITOS_RESERVADOS">© 2026 <strong> Us Journal Health. </strong> All Rights Reserved.</p>
-  <a href="#" _element_id="LINK_PRIVACIDADE">Privacy Policy</a> &nbsp;|&nbsp; <a href="#" _element_id="LINK_TERMOS">Terms of Service</a><br><br>
-  Disclaimer: All information and results presented on this website are for informational purposes only and are not intended to diagnose, treat, cure, or prevent any disease. Results may vary from person to person. Consult your doctor before changing your diet.
+	<p>© 2026 <strong> Us Journal Health. </strong> All Rights Reserved.</p>
+ <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a><br><br>
+ Disclaimer: All information and results presented on this website are for informational purposes only and are not intended to diagnose, treat, cure, or prevent any disease. Results may vary from person to person. Consult your doctor before changing your diet.
 </div>
 
 <!-- STICKY FOOTER -->
 <div class="sticky">
-  <p _element_id="RODAPE_RECAP">🌿 Dr. Gupta reveals the real gelatin recipe — free presentation</p>
-  <a href="video.php" class="sticky-cta" _element_id="CTA_TEXTO_MINI">Watch Free →</a>
+ <p>🌿 Dr. Gupta reveals the real gelatin recipe — free presentation</p>
+ <a href="video.php" class="sticky-cta">Watch Free →</a>
 </div>
 
 <script>
-  (function () {
-    var sticky = document.querySelector('.sticky');
-    var firstCta = document.querySelector('.cta-wrap');
+ (function () {
+ var sticky = document.querySelector('.sticky');
+ var firstCta = document.querySelector('.cta-wrap');
 
-    function check() {
-      if (!firstCta) return;
-      var rect = firstCta.getBoundingClientRect();
-      // Mostra o sticky quando o primeiro CTA já passou pela viewport
-      if (rect.bottom < 0) {
-        sticky.classList.add('visible');
-      } else {
-        sticky.classList.remove('visible');
-      }
-    }
+ function check() {
+ if (!firstCta) return;
+ var rect = firstCta.getBoundingClientRect();
+ // Mostra o sticky quando o primeiro CTA já passou pela viewport
+ if (rect.bottom < 0) {
+ sticky.classList.add('visible');
+ } else {
+ sticky.classList.remove('visible');
+ }
+ }
 
-    window.addEventListener('scroll', check, { passive: true });
-    check();
-  })();
+ window.addEventListener('scroll', check, { passive: true });
+ check();
+ })();
 </script>
 
 
